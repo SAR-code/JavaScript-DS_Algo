@@ -15,6 +15,8 @@ DROP CONSTANTS
 Code runs n + n = 2n ----> O(2n) Operation
 If there is a constant in the big O notation, drop the constant
 O(2n) becomes O(n)
+
+Another example: O(100n^2) becomes O(n^2) by dropping the 100 (constant)
 */
 
 function logItemsTwo(n){
@@ -93,3 +95,67 @@ function addItems(n) {
     return n + n;
 }
 
+
+/*
+EXAMPLE OF O(log n)
+Technique is called "Divide and Conquer"
+
+Very flat and efficient on a graph
+
+*/
+
+/*
+Different Terms of Input
+
+*/
+
+function logItemsDifferentTerms(a, b){
+    // The top for-loop represents O(a)
+    for( let i = 0; i < a; i++){
+        console.log(i)
+    };
+
+    // This for-loop represents O(b)
+    for( let j = 0; j < b; j++){
+        console.log(j)
+    };
+
+    //When added together, you end up with O(a + b)
+
+    // For nested for loops, you will multiply
+    for( let i = 0; i < a; i++){
+        for( let j = 0; j < b; j++){
+            console.log(i,j)
+        };
+    };
+
+    // So you will end up with O(a * b) in a nested situation with different terms
+};
+
+
+/*
+EXAMPLE OF bigO ARRAYS
+.push & .pop are O(1) operations
+
+O(n), n = the number of items inside the array
+If the array has to re-index the items inside, that is considered an O(n) operation.
+If you search by value, that is an O(n) operation.
+If you search by index, that is an O(1) operation.
+
+*/
+
+let myArray = [11,3, 23, 7];
+myArray.push(17);
+myArray.splice (1, 0, "Hello");
+
+
+/*
+QUICK REFERENCE
+
+O(n^2) --> Loop within a Loop
+O(n) --> Proportional
+O(log n) --> Divide and Conquer
+O(1) -- Constant
+
+*Considered the Big 4
+*/ 
