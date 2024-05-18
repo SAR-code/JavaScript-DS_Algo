@@ -158,5 +158,10 @@ O(log n) --> Divide and Conquer
 O(1) -- Constant
 
 *Considered the Big 4
-*/ 
-// Test push after readme
+
+/*
+
+BigO cheatsheet:
+https://www.bigocheatsheet.com/
+
+*/
